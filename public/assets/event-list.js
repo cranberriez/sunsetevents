@@ -50,7 +50,7 @@ $(document).ready(function(){ // Front-end Jquery FILE
     } else {
       tempEvents.unshift({
         'user': $("[name='user']").val(),
-        'password': MD5($("[name='pword']").val())
+        'password': hashPassword($("[name='pword']").val())
       })
       if (confirm('Are you sure you want to Publish?') == true) {
         let events = JSON.stringify(tempEvents)
@@ -83,7 +83,7 @@ $(document).ready(function(){ // Front-end Jquery FILE
     } else {
       var login = {
         'user': $("[name='user']").val(),
-        'password': MD5($("[name='pword']").val())
+        'password': hashPassword($("[name='pword']").val())
       }
       $.ajax({
         type: 'DELETE',

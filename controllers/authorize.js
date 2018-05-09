@@ -1,4 +1,4 @@
-var secret = "Muffin134gu3__!";
+var secret = "";
 var crypto = require('crypto')
 var fs = require('fs')
 var CryptoJS = require("crypto-js")

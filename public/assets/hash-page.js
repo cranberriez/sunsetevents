@@ -1,7 +1,7 @@
 $(function(){
   $('form').on('submit', function(e){
     e.preventDefault();
-    let text = $('input').val()
+    let text = hashPassword($('input').val())
     $.ajax({
       type: 'POST',
       url: '/dev/hash',
