@@ -7,5 +7,6 @@ function hashPassword(password) {
   }
   var date2 = new Date();
   console.log(date2.getTime())
+  console.log("MD5: " + toHash)
   return toHash
 }
