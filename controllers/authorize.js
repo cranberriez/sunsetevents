@@ -59,6 +59,19 @@ module.exports = {
     }
   },
 
+  getTestInfo: function(user) {
+    try {
+      var passwords = JSON.parse(fs.readFileSync("./json/testpasswords.json").toString());
+      if (Object.keys(passwords).includes(user)) {
+        return passwords[user].hash
+      } else {
+        return ''
+      }
+    } catch(err) {
+      throw err;
+    }
+  },
+
   confirmToken: function(req) {
     try {
       let clientToken = authorize.generateToken(authorize.hash(req.body.password))

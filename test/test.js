@@ -6,6 +6,6 @@ describe('hash()', function () {
     var input = "9bceef16317112fda9a76aea295c1ba6";
     var output = authorize.hash(input)
     var user = "jacob"
-    expect(output).to.be.equal(authorize.getUserInfo(user));
+    expect(output).to.be.equal(authorize.getTestInfo(user));
   });
 });
