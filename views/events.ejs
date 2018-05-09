@@ -1,0 +1,50 @@
+<html>
+  <head>
+    <title>Event Creator</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="/assets/md5.js"></script>
+    <script src="/assets/event-list.js"></script>
+    <link href="/assets/styles.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div id="todo-table">
+      <p><a href='/dev'>Back</a></p>
+      <h1>Event Creator</h1>
+      <form>
+        <input autocomplete="off" type='text' name='title' placeholder='(required) Title' required>
+        <input autocomplete="off" type='text' name='loc' placeholder='Location'>
+        <input autocomplete="off" type='text' name='time' placeholder='Date & Time'>
+        <input autocomplete="off" type='text' name='desc' placeholder='Description'>
+        <input autocomplete="off" type='text' name='img' placeholder='Image Url'>
+        <button>Add Event</button><button type='button' id='clear'>Clear Inputs</button>
+        <h2>Login</h2>
+        <p>User
+          <select name="user">
+            <option value="huelskamp">Principal</option>
+            <option value="it">IT</option>
+            <option value="counselor">Counselor</option>
+            <option value="person" selected>Person</option>
+            <option value="jacob" selected>Jacob</option>
+          </select>
+        </p>
+        <input placeholder='(required) Personal ID' type="password" name="pword" autocomplete="off" readonly onfocus="this.removeAttribute('readonly');">
+        <button type='button' id='publish'>Publish</button>
+      </form>
+      <h2>Preview</h2>
+      <!-- <button id='reveal'>Show Hash</button> -->
+      <ul class='preview'></ul>
+      <h2>Events</h2>
+      <a href='/public'>Public Events List (Signage)</a>
+      <ul class='eventList'>
+        <% for (var i = 0; i < events.length; i++) { %>
+          <li id=<%= events[i].id %> ><em><strong>Title:</strong> <%= events[i].title %></em>
+            <p><strong>Desc:</strong> <%= events[i].description %></p>
+            <p><strong>Location:</strong> <%= events[i].location %></p>
+            <p><strong>Time:</strong> <%= events[i].time %></p>
+            <p><strong>Image:</strong> <%= events[i].image %></p>
+          </li>
+        <% } %>
+      </ul>
+    </div>
+  </body>
+</html>
