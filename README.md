@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/cranberriez/sunsetevents.svg?branch=master)](https://travis-ci.com/cranberriez/sunsetevents)
+
 # Sunset Event Planner
 Basic event creation and display system using node, for Sunset High School
 
