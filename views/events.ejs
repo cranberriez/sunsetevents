@@ -20,15 +20,9 @@
         <button>Add Event</button><button type='button' id='clear'>Clear Inputs</button>
         <h2>Login</h2>
         <p>User
-          <select name="user">
-            <option value="huelskamp">Principal</option>
-            <option value="it">IT</option>
-            <option value="counselor">Counselor</option>
-            <option value="person" selected>Person</option>
-            <option value="jacob" selected>Jacob</option>
-          </select>
+          <input autocomplete="off" type='text' name='user' placeholder='user'>
         </p>
-        <input placeholder='(required) Personal ID' type="password" name="pword" autocomplete="off" readonly onfocus="this.removeAttribute('readonly');">
+        <input placeholder='(required) Password' type="password" name="pword" autocomplete="off" readonly onfocus="this.removeAttribute('readonly');">
         <button type='button' id='publish'>Publish</button>
       </form>
       <h2>Preview</h2>
