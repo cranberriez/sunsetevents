@@ -4,7 +4,8 @@
   "description": "basic to do application using express",
   "main": "app.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "start": "node app.js"
   },
   "engines": {
     "node": "10.x"
